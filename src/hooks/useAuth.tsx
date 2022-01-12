@@ -78,8 +78,12 @@ function AuthProvider({ children }: AuthProviderData) {
         }
         api.defaults.headers.authorization = `Bearer ${response.params.access_token}`;
         const userResponse = await api.get('/users');
-        setUser(userResponse.data.data[0]);
-
+        setUser({
+          id: userResponse.data.data[0],
+          display_name: userResponse.data.data[0],
+          email: userResponse.data.data[0],
+          profile_image_url:userResponse.data.data[0]
+        });
         setUserToken(response.params.access_token);
       }
 
