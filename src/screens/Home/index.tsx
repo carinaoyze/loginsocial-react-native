@@ -129,7 +129,7 @@ export function Home() {
         </UserInfo>
 
         <SignOutButton onPress={handleSignOut}>
-         {  isLoggingOut ? <ActivityIndicator style={{width:25}} color={theme.colors.white} /> : <Feather name="power" style={{width:24}} color={theme.colors.white} />
+         {  isLoggingOut ? <ActivityIndicator size={25} color={theme.colors.white} /> : <Feather name="power" size={24} color={theme.colors.white} />
          }
         </SignOutButton>
       </Header>
